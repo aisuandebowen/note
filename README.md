@@ -6,6 +6,10 @@ Hello, I'm Chen Bowen and i'm from xhua university. I major in mathematics of co
 
 + [front-end](./frontend-note.md)
 
++ [git.md](./git.md)
+
+  ​
+
   ​
 
   ​
