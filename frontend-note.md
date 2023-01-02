@@ -1184,7 +1184,9 @@ Object.freeze(obj)
 
 #### Proxy代理
 
-1. 语法
+代理属性：
+
+1. 语法grammar
 
    ```javascript
    const proxy = new Proxy(obj,{
@@ -1198,6 +1200,22 @@ Object.freeze(obj)
      },
    });
    })
+   ```
+
+
+代理方法：
+
+1. 语法grammar 
+
+   ```javascript
+   const proxy = new Proxy(show, {
+     apply(obj, target, params) {
+       obj();
+       console.log(obj, target, params);
+     },
+   });
+
+   proxy()
    ```
 
    ​
