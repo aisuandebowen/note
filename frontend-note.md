@@ -1,8 +1,8 @@
 # HTML CSS
 
-## Flex布局
+## Flex 布局
 
-### 使用flex布局
+### 使用 flex 布局
 
 1. 容器
 
@@ -20,7 +20,7 @@
    }
    ```
 
-flex布局后，`float`、`vertical-align`、`clear`失效。
+flex 布局后，`float`、`vertical-align`、`clear`失效。
 
 ### 容器属性
 
@@ -72,17 +72,17 @@ flex布局后，`float`、`vertical-align`、`clear`失效。
 
 ### 项目属性
 
-1. `order`：项目排列顺序，默认0，越小越靠前。
+1. `order`：项目排列顺序，默认 0，越小越靠前。
 
-2. `flex-grow`：项目放大比例，默认0。
+2. `flex-grow`：项目放大比例，默认 0。
 
-   如果所有项目的`flex-grow`属性都为1，则它们将等分剩余空间（如果有的话）。如果一个项目的`flex-grow`属性为2，其他项目都为1，则前者占据的剩余空间将比其他项多一倍。
+   如果所有项目的`flex-grow`属性都为 1，则它们将等分剩余空间（如果有的话）。如果一个项目的`flex-grow`属性为 2，其他项目都为 1，则前者占据的剩余空间将比其他项多一倍。
 
-3. `flex-shrink`：项目缩小比例，默认1。
+3. `flex-shrink`：项目缩小比例，默认 1。
 
-   所有项目的`flex-shrink`属性都为1，当空间不足时，都将等比例缩小。如果一个项目的`flex-shrink`属性为0，其他项目都为1，则空间不足时，前者不缩小。
+   所有项目的`flex-shrink`属性都为 1，当空间不足时，都将等比例缩小。如果一个项目的`flex-shrink`属性为 0，其他项目都为 1，则空间不足时，前者不缩小。
 
-4. `flex-basis`：项目占据的主轴空间，默认为auto即项目原本大小。
+4. `flex-basis`：项目占据的主轴空间，默认为 auto 即项目原本大小。
 
 5. `flex`：`flex-grow`、`flex-shrink`、`flex-basis`三者合一。
 
@@ -128,7 +128,7 @@ flex布局后，`float`、`vertical-align`、`clear`失效。
 - `font`：设置属性
 
   ```javascript
-  ctx.font = '30px Arail'
+  ctx.font = "30px Arail";
   ```
 
 - `fillText(str, x, y)`：绘制实心文本。
@@ -168,7 +168,7 @@ ctx.fillRect(50, 125, 150, 75);
 
 原理：生成单个`canvas`水印，放到大`div`中，此大`div`设置`absolute`定位、高`z-index`、`background-img:url()`，依靠背景图片默认`repeat`。
 
-css解读
+css 解读
 
 1. `position: absolute`：将元素从文档流拖出来，对其最接近的一个具有定位属性的父定位包含框进行绝对定位。如果不存在这样的定位包含框，则相对于浏览器窗口。
 2. `pointer-events: none`：该元素永远不会成为鼠标事件的 target。当其后代元素的`pointer-events`属性指定其他值时，鼠标事件可以指向后代元素。
@@ -358,17 +358,17 @@ const wm2 = new WaterMark(
 
 #### Symbol-新数据类型
 
-Symbol是JavaScript的第七种数据类型。常用于表示独一无二的字符串，例如函数名等。
+Symbol 是 JavaScript 的第七种数据类型。常用于表示独一无二的字符串，例如函数名等。
 
 ##### 定义
 
 1. `Symbol()`
 
-   局部，相同的串并不代表是同一个Symbol。
+   局部，相同的串并不代表是同一个 Symbol。
 
 2. `Symbol.for()`
 
-   全局，开辟内存空间，相同的串代表是同一个Symbol。
+   全局，开辟内存空间，相同的串代表是同一个 Symbol。
 
 ##### 描述
 
@@ -377,38 +377,38 @@ Symbol是JavaScript的第七种数据类型。常用于表示独一无二的字�
 
 ##### 用途
 
-1. 唯一的key。
+1. 唯一的 key。
 
 2. 对象私有属性。
 
-   遍历时，将无法取到以Symbol对象为key的属性。
+   遍历时，将无法取到以 Symbol 对象为 key 的属性。
 
 ##### 注意事项
 
-1. `for...in`取不到以Symbol对象为key的属性。
-2. `Object.getOwnPropertySymbols()`可以拿到以Symbol对象为key的属性。
+1. `for...in`取不到以 Symbol 对象为 key 的属性。
+2. `Object.getOwnPropertySymbols()`可以拿到以 Symbol 对象为 key 的属性。
 3. `Reflect.ownKeys()`能够获取所有属性。
 
 #### 数据结构
 
 ##### Set
 
-类似数组，但所有value唯一。
+类似数组，但所有 value 唯一。
 
 常用
 
-+ 属性：`size`
-+ 方法：
+- 属性：`size`
+- 方法：
   1. 增：`add`
   2. 查：`has`
   3. 删：`delete`
   4. `clear`：清空。
-  5. `values`：获得Set迭代对象。
+  5. `values`：获得 Set 迭代对象。
 
 与数组互转
 
-+ 转数组：`Array.from()`、`[...set]`
-+ 转Set：`new Set(arr)`
+- 转数组：`Array.from()`、`[...set]`
+- 转 Set：`new Set(arr)`
 
 ##### WeakSet
 
@@ -438,32 +438,32 @@ Symbol是JavaScript的第七种数据类型。常用于表示独一无二的字�
 
 ##### Map
 
-类似对象，但所有key唯一，且key可以是任意值（对象key本质是字符串）。
+类似对象，但所有 key 唯一，且 key 可以是任意值（对象 key 本质是字符串）。
 
 常用
 
 1. 属性
 2. 方法
-   + 增：
-     + `set`，key同样时，即为更改。
-     + `new Map([[key, value], [], ...])`
-   + 删：`delete`
-   + 查：`has`、`get`
+   - 增：
+     - `set`，key 同样时，即为更改。
+     - `new Map([[key, value], [], ...])`
+   - 删：`delete`
+   - 查：`has`、`get`
 3. 遍历
-   + `entries`，可以解构一下[key, value]
-   + `keys`
-   + `values`
-   + `for...of`
-   + `forEach`
+   - `entries`，可以解构一下[key, value]
+   - `keys`
+   - `values`
+   - `for...of`
+   - `forEach`
 
 与数组互转
 
-+ 转数组：`[...map]`
-+ 转map：`new Map([[key, value], [], ...])`
+- 转数组：`[...map]`
+- 转 map：`new Map([[key, value], [], ...])`
 
 ##### WeakMap
 
-与map差不多，但**键key必须是引用数据类型**，且WeakMap是弱引用类型。
+与 map 差不多，但**键 key 必须是引用数据类型**，且 WeakMap 是弱引用类型。
 
 变化：`size`、`keys`等方法都用不了，因为是弱引用，不加入垃圾回收机制。
 
@@ -488,36 +488,34 @@ num1 **= 3 // num1 ^3
    `obj`是否存在？`obj.obj2`是否存在？`obj.obj2.data`是否存在？顺序着来，不存在直接返回`undefined`。
 
    ```js
-   const data = obj?.obj2?.data || {}
+   const data = obj?.obj2?.data || {};
    ```
 
 2. 对象方法
 
    ```js
-   obj?.func()
+   obj?.func();
    ```
 
 3. 函数调用
 
    ```js
-   func?.()
+   func?.();
    ```
 
-##### Null判断运算符`??`
+##### Null 判断运算符`??`
 
-通常赋默认值是以`||`方式提供，但 如`null、undefined、NaN、0、""、false`也会出现会被囊括其中。Null判断运算符`??`只有运算符左侧的值为`undefined`、`null`时才会返回右侧的值。
+通常赋默认值是以`||`方式提供，但 如`null、undefined、NaN、0、""、false`也会出现会被囊括其中。Null 判断运算符`??`只有运算符左侧的值为`undefined`、`null`时才会返回右侧的值。
 
 ```js
-const num = 0 ?? 1 // num = 0
-const num = obj?.num ?? 1 // num = 1
+const num = 0 ?? 1; // num = 0
+const num = obj?.num ?? 1; // num = 1
 ```
-
-
 
 ## 文字翻转
 
 ```js
-split('').reverse().join('')
+split("").reverse().join("");
 ```
 
 ## 类型判断
@@ -547,42 +545,41 @@ type of hdcms // hdcms已声明情况下：undefined，因为初始值为undefin
 
 同源：协议、url、端口号一致。
 
-1. A页面
+1. A 页面
 
    ```javascript
-   window.addEventListener('storage', (e)=>{
-     console.log(e)
-   })
+   window.addEventListener("storage", (e) => {
+     console.log(e);
+   });
    ```
 
-2. B页面
+2. B 页面
 
    ```javascript
-   localStorage.setItem(key, value)
+   localStorage.setItem(key, value);
    ```
 
 ### 跨域页面
 
 跨域：协议、url、端口号至少一个不一样。
 
-1. A页面
+1. A 页面
 
    ```javascript
-   window.addEventListener('message', (e) => {
-     console.log(e)
+   window.addEventListener("message", (e) => {
+     console.log(e);
      // e.origin 查看源地址
-   })
+   });
    ```
 
-2. B页面
+2. B 页面
 
    ```javascript
-   const targetWindow = window.open('http://localhost:10001/user');
-   setTimeout(()=>{
-        targetWindow.postMessage('来自10002的消息', 'http://localhost:10001')
-   }, 3000)
+   const targetWindow = window.open("http://localhost:10001/user");
+   setTimeout(() => {
+     targetWindow.postMessage("来自10002的消息", "http://localhost:10001");
+   }, 3000);
    ```
-
 
 ## 内存泄漏
 
@@ -594,7 +591,7 @@ type of hdcms // hdcms已声明情况下：undefined，因为初始值为undefin
 2. 定时器
 3. 闭包使用不当
 4. 网络回调函数
-5. DOM元素（js、DOM树都清理）
+5. DOM 元素（js、DOM 树都清理）
 
 ### Garbage Collection（GC）
 
@@ -604,7 +601,7 @@ type of hdcms // hdcms已声明情况下：undefined，因为初始值为undefin
 
 2. 引用计数法
 
-   新引用+1，移出引用-1，引用为0的对象回收。
+   新引用+1，移出引用-1，引用为 0 的对象回收。
 
 ## Websocket
 
@@ -625,21 +622,19 @@ type of hdcms // hdcms已声明情况下：undefined，因为初始值为undefin
 例子
 
 ```javascript
-const ws = new WebSocket(url)
+const ws = new WebSocket(url);
 // 建立连接
-ws.addEventListener('open', () => {
-  ws.send('hello server') // 向服务端发送数据
-})
+ws.addEventListener("open", () => {
+  ws.send("hello server"); // 向服务端发送数据
+});
 // 接受消息
-ws.addEventListener('message', (e) => {
+ws.addEventListener("message", (e) => {
   // e.data
-})
+});
 // 断开连接
-ws.addEventListener('close', () => {
-})
+ws.addEventListener("close", () => {});
 // 断开连接
-ws.addEventListener('error', () => {
-})
+ws.addEventListener("error", () => {});
 ```
 
 对于后端，每创建一个新的连接，都会有一个`conn`对象。
@@ -650,10 +645,9 @@ ws.addEventListener('error', () => {
 
 ```javascript
 try {
-  
-}catch (err) {
-  throw new Error()
-}finally {
+} catch (err) {
+  throw new Error();
+} finally {
   // 总会做的事情
 }
 ```
@@ -667,7 +661,7 @@ function func() {
   } catch (err) {
     /* ... */
   } finally {
-    alert( 'finally' );
+    alert("finally");
   }
 }
 ```
@@ -711,13 +705,14 @@ function func() {
 1. 检测浏览器是否支持`Web Workers`
 
    ```javascript
-   if(window.Worker) {}
+   if (window.Worker) {
+   }
    ```
 
 2. 创造一个`worker`
 
    ```javascript
-   const worker1 = new Worker(aURL, options)
+   const worker1 = new Worker(aURL, options);
    ```
 
    此`worker`指定一个脚本来执行线程。
@@ -728,19 +723,19 @@ function func() {
    onmessage = function (e) {
      // e.data
      postMessage(data);
-   }
+   };
    ```
 
 3. 向`worker`发送数据
 
    ```javascript
-   worker1.postMessage(data)
+   worker1.postMessage(data);
    ```
 
 4. 监听`worker`返回的消息
 
    ```javascript
-   worker1.onmessage = function (e) {}
+   worker1.onmessage = function (e) {};
    ```
 
 5. 杀掉`worker`
@@ -759,13 +754,13 @@ function func() {
 
 3. `startsWith(str)`
 
-   是否以str开头。
+   是否以 str 开头。
 
 ### 截取
 
 1. `substr(start, num)`
 2. `slice(start, end)`
-3. `subString(start, end)`：start和end为非负的整数。
+3. `subString(start, end)`：start 和 end 为非负的整数。
 
 ### 替换
 
@@ -780,7 +775,7 @@ function func() {
 ### 检测
 
 ```javascript
-Array.isArray()
+Array.isArray();
 ```
 
 ### 数组与字符串互转
@@ -801,7 +796,7 @@ Array.isArray()
 
 3. `[...arr] = str`
 
-   原理解构赋值+rest操作符。str本身是有 length属性的字符串，所以每个字符都放到了变量arr里。
+   原理解构赋值+rest 操作符。str 本身是有 length 属性的字符串，所以每个字符都放到了变量 arr 里。
 
 ### 元素操作
 
@@ -838,10 +833,10 @@ Array.isArray()
 
 ### 替换
 
-以obj替换已有数组[start, end)所有元素。
+以 obj 替换已有数组[start, end)所有元素。
 
 ```javascript
-arr.fill(obj, start, end)
+arr.fill(obj, start, end);
 ```
 
 ### 清空数组
@@ -850,7 +845,7 @@ arr.fill(obj, start, end)
 2. 推荐：`arr.length = 0`
 3. `arr.splice(0, arr.length)`
 
-### 创建数组 
+### 创建数组
 
 1. `Array.of(params,...)`
 
@@ -863,18 +858,18 @@ arr.fill(obj, start, end)
    通过拥有 length 属性的对象或可迭代的对象来返回一个数组。
 
    ```javascript
-   Array.from(obj, mapFunc, this)
+   Array.from(obj, mapFunc, this);
    ```
 
    可实现浅拷贝，如
 
    ```javascript
-   const arr = Array.from([{a: '1'}, 'b'])
+   const arr = Array.from([{ a: "1" }, "b"]);
    ```
 
 3. `new Array()`
 
-   仅传一个参数num，即创建num个为undefined的元素。多个参数与`Array.of`一致。
+   仅传一个参数 num，即创建 num 个为 undefined 的元素。多个参数与`Array.of`一致。
 
 ### 数组截取
 
@@ -883,12 +878,12 @@ arr.fill(obj, start, end)
    截取数组[start, end)部分，返回一个新数组。不对原数组操作。
 
    ```javascript
-   arr.slice(start, end)
+   arr.slice(start, end);
    ```
 
    注意
 
-   1. 只传一个参数时，end代表`arr.length`。
+   1. 只传一个参数时，end 代表`arr.length`。
    2. slice(0)是浅拷贝！！！
 
 2. `splice`
@@ -896,7 +891,7 @@ arr.fill(obj, start, end)
    此函数会**修改数组本身**，返回被修改的内容。
 
    ```javascript
-   arr.splice(start) 
+   arr.splice(start);
    ```
 
 ### 查找
@@ -905,18 +900,18 @@ arr.fill(obj, start, end)
 
 1. `indexOf`
 
-   查找在数组中某一指定元素（必须`===`）的第一次出现的位置。返回index、-1。
+   查找在数组中某一指定元素（必须`===`）的第一次出现的位置。返回 index、-1。
 
    ```js
-   arr.indexOf(obj)
+   arr.indexOf(obj);
    ```
 
 2. `includes`
 
-   判断一个数组是否包含一个指定的值，返回true、false。
+   判断一个数组是否包含一个指定的值，返回 true、false。
 
    ```javascript
-   arr.includes(ele)
+   arr.includes(ele);
    ```
 
 3. `find`
@@ -940,27 +935,27 @@ arr.fill(obj, start, end)
    查找通过测试的第一个值，返回查到的值的索引、-1。
 
    ```javascript
-   arr.findIndex(item => item > 18)
+   arr.findIndex((item) => item > 18);
    ```
 
 5. `some`
 
-   查找是否有通过测试的值，返回true、false。
+   查找是否有通过测试的值，返回 true、false。
 
    ```javascript
-   arr.some((item, index) => item > 18)
+   arr.some((item, index) => item > 18);
    ```
 
 6. `every`
 
-   类some，查找是否都有通过测试，返回true、false。
+   类 some，查找是否都有通过测试，返回 true、false。
 
 7. `filter`
 
    过滤不符合条件的元素，返回一个新数组（浅拷贝）。
 
    ```javascript
-   arr2 = arr.filter(item => item > 18)
+   arr2 = arr.filter((item) => item > 18);
    ```
 
    原理：
@@ -972,14 +967,14 @@ arr.fill(obj, start, end)
        callback(iterator) && arr.push(iterator);
      }
      return arr;
-    };
+   };
    ```
 
 ### 合并
 
 1. `arr.concat(array2,...)`
 
-   返回一个新数组，将arr、arr2,...连接。传入的参数如果是数组，将被展开一层。如果是非数组，将直接作为元素添加。
+   返回一个新数组，将 arr、arr2,...连接。传入的参数如果是数组，将被展开一层。如果是非数组，将直接作为元素添加。
 
 2. `[...arr1, ...arr2]`
 
@@ -988,7 +983,7 @@ arr.fill(obj, start, end)
 ### 排序
 
 ```javascript
-arr.sort((a,b) => a-b) // 小于0升序，大于0降序
+arr.sort((a, b) => a - b); // 小于0升序，大于0降序
 ```
 
 原理：
@@ -1011,10 +1006,10 @@ Array.prototype.sort = function (callback) {
 };
 ```
 
-### 翻转	
+### 翻转
 
 ```javascript
-arr.reverse() 
+arr.reverse();
 ```
 
 ### 集合运算
@@ -1022,7 +1017,7 @@ arr.reverse()
 #### 去重
 
 ```javascript
-[...new Set(arr)]
+[...new Set(arr)];
 ```
 
 #### 交集
@@ -1062,7 +1057,7 @@ function show(arr1, arr2) {
 #### 差集
 
 ```javascript
-arr1.filter((item) => !new Set(arr2).has(item))
+arr1.filter((item) => !new Set(arr2).has(item));
 ```
 
 ### 高阶
@@ -1140,21 +1135,21 @@ arr1.filter((item) => !new Set(arr2).has(item))
 2. 读取属性特征
 
    ```javascript
-   Object.getOwnPropertyDescriptor(obj, propertyStr)
+   Object.getOwnPropertyDescriptor(obj, propertyStr);
 
-   Object.getOwnPropertyDescriptors(obj)
+   Object.getOwnPropertyDescriptors(obj);
    ```
 
 #### 删除属性
 
 ```javascript
-delete obj.property
+delete obj.property;
 ```
 
 #### 禁止添加属性
 
 ```javascript
-Object.preventExtensions(obj)
+Object.preventExtensions(obj);
 ```
 
 检测是否禁止：`Object.isExtensible()`
@@ -1164,7 +1159,7 @@ Object.preventExtensions(obj)
 禁止添加属性，且对象不可配置
 
 ```javascript
-Object.seal(obj)
+Object.seal(obj);
 ```
 
 检测是否被封禁：`Object.isSealed()`
@@ -1174,7 +1169,7 @@ Object.seal(obj)
 对象不能被修改，不可增删属性、不可配置、不可写，原型不可修改。
 
 ```javascript
-Object.freeze(obj)
+Object.freeze(obj);
 ```
 
 #### 检测某属性是否存在
@@ -1182,43 +1177,16 @@ Object.freeze(obj)
 1. `hasOwnProperty`：不查原型链
 2. `in`：查原型链
 
-#### Proxy代理
+#### 访问器
 
-代理属性：
+```javascript
+const data = {
+  set property(value) {},
+  get property() {},
+};
+```
 
-1. 语法grammar
-
-   ```javascript
-   const proxy = new Proxy(obj,{
-     const proxy = new Proxy(obj, {
-     get(obj, property) {
-       return obj[property];
-     },
-     set(obj, property, newVal) {
-       obj[property] = newVal;
-       return true;
-     },
-   });
-   })
-   ```
-
-
-代理方法：
-
-1. 语法grammar 
-
-   ```javascript
-   const proxy = new Proxy(show, {
-     apply(obj, target, params) {
-       obj();
-       console.log(obj, target, params);
-     },
-   });
-
-   proxy()
-   ```
-
-   ​
+注意，`set`和打点访问赋值同时针对一个属性，`set`优先。
 
 ### 遍历
 
@@ -1274,32 +1242,38 @@ Object.freeze(obj)
    }
    ```
 
-   ## if()表达式和==原理
+### 创建对象
+
+```javascript
+Object.create(prototype, properties);
+```
+
+## if()表达式和==原理
 
 ### if()
 
 ```javascript
 if(1) // true ---> if(Boolean(1))
 if(undefined) // fasle
-if({}) // true 
+if({}) // true
 if([]) // true ---> if(Boolean([]))
 ```
 
-`if()`里，其实就是执行Boolan()方法。
+`if()`里，其实就是执行 Boolan()方法。
 
 ### ==
 
 ```javascript
-1 == true // true
-2 == true // false ---> Number(2) == Number(true) ---> 2 == 1
-[1] == true // true
+1 == true; // true
+(2 == true[1]) == // false ---> Number(2) == Number(true) ---> 2 == 1
+  true; // true
 ```
 
 `==`，本质是执行`Number()`方法。
 
 ### Boolean()
 
-|    类型     |     值     | Boolean() |
+|   类型    |    值     | Boolean() |
 | :-------: | :-------: | :-------: |
 | undefined | undefined |   false   |
 |   null    |   null    |   false   |
@@ -1316,15 +1290,15 @@ if([]) // true ---> if(Boolean([]))
 
 总结：
 
-1. undefined、null都为false。
-2. 字符串只有''为false。
-3. 数值类型只有0为false。
-4. 引用数据类型都为true。
+1. undefined、null 都为 false。
+2. 字符串只有''为 false。
+3. 数值类型只有 0 为 false。
+4. 引用数据类型都为 true。
 5. 布尔类型看本身。
 
 ### Number()
 
-|    类型     |     值     | Number() |
+|   类型    |    值     | Number() |
 | :-------: | :-------: | :------: |
 | undefined | undefined |   NaN    |
 |   null    |   null    |    0     |
@@ -1344,20 +1318,20 @@ if([]) // true ---> if(Boolean([]))
 
 总结：
 
-1. undefined为NaN。
-2. null为0。
-3. 字符类型长度为0必为0。长度不为0看value是否包含非数字，不包含就是去掉引号后的值。否则NaN。
+1. undefined 为 NaN。
+2. null 为 0。
+3. 字符类型长度为 0 必为 0。长度不为 0 看 value 是否包含非数字，不包含就是去掉引号后的值。否则 NaN。
 4. 数值类型保持原值。
-5. 布尔类型true为1，false为0。
+5. 布尔类型 true 为 1，false 为 0。
 6. 引用数据类型。
-   + 对象{}为NaN。
-   + 数组长度为0即为0。长度为1则转那一个数值，长度大于1则NaN。
+   - 对象{}为 NaN。
+   - 数组长度为 0 即为 0。长度为 1 则转那一个数值，长度大于 1 则 NaN。
 
 ## Math
 
 1. `max`、`min`
 
-   可以使用spread、rest或apply、call来改变传入参数是列表还是数组。
+   可以使用 spread、rest 或 apply、call 来改变传入参数是列表还是数组。
 
 2. `ceil`、`floor`
 
@@ -1374,7 +1348,7 @@ if([]) // true ---> if(Boolean([]))
    取[num1, num2]的整数：本质还是[0 ,num]
 
    ```javascript
-   function getRandom(num1,  num2) {
+   function getRandom(num1, num2) {
      return (
        Math.min(num1, num2) + Math.floor(Math.random() * (num2 - num1 + 1))
      );
@@ -1390,10 +1364,10 @@ if([]) // true ---> if(Boolean([]))
 3. `date.valueOf()`
 4. `date.getTime`
 
-### 时间戳转ISO时间
+### 时间戳转 ISO 时间
 
 ```javascript
-new Date(timeStamp)
+new Date(timeStamp);
 ```
 
 ### 格式化
@@ -1401,7 +1375,7 @@ new Date(timeStamp)
 好库：moment.js
 
 1. 年：`getFullYear`
-2. 月：`getMonth`，从0开始。
+2. 月：`getMonth`，从 0 开始。
 3. 日：`getDate`
 4. 小时：`getHours`
 5. 分钟：`getMinutes`
@@ -1430,9 +1404,7 @@ function formatDate(date, format) {
 console.log(formatDate(d, "YY年MM月"));
 ```
 
-
-
-# Vue 
+# Vue
 
 ## 创建全局组件
 
@@ -1477,7 +1449,7 @@ Vue 为你提供了一种方式来表达“这两个元素是完全独立的，�
 ### 同步组件
 
 ```js
-import componentA from './componentA.vue'
+import componentA from "./componentA.vue";
 ```
 
 ### 异步组件
@@ -1485,7 +1457,7 @@ import componentA from './componentA.vue'
 只在组件**需要渲染的时候才进行加载渲染**并进行缓存，以备下次访问。
 
 ```js
-componentA: () => import('./componentA.vue')
+componentA: () => import("./componentA.vue");
 ```
 
 调用异步组件的方法-延时
@@ -1506,13 +1478,13 @@ setTimeout(() => {
 
    父组件获取子组件时：
 
-   同步组件：nextTick可以获取组件。
+   同步组件：nextTick 可以获取组件。
 
-   异步组件：**第一次nextTick之后无法获取组件**。
+   异步组件：**第一次 nextTick 之后无法获取组件**。
 
 2. 打包
 
-   打包成单独的js文件存储在static/js文件夹里面
+   打包成单独的 js 文件存储在 static/js 文件夹里面
 
 3. 生命周期顺序
 
@@ -1571,15 +1543,15 @@ setTimeout(() => {
    - 子组件
 
      ```javascript
-     Vue.component('Son', {
-       props: ['message'],
+     Vue.component("Son", {
+       props: ["message"],
        template: `
          <input
            v-bind:value="message"
            v-on:input="$emit('input', $event.target.value)"
          >
-       `
-     })
+       `,
+     });
      ```
 
    小知识：`update:myPropName`模式可以用`.sync`修饰符使父子组件通信的`prop`进行双向绑定。
@@ -1589,7 +1561,7 @@ setTimeout(() => {
      数据发生变化时
 
      ```js
-     this.$emit('update:title', newtitle)
+     this.$emit("update:title", newtitle);
      ```
 
    - 父组件
@@ -1638,8 +1610,6 @@ setTimeout(() => {
    }
    ```
 
-
-
 ## 插槽
 
 ### 使用
@@ -1678,7 +1648,7 @@ setTimeout(() => {
 
 ### 插槽内容使用子组件数据
 
-子组件	
+子组件
 
 ```vue
 <slot v-bind:propName="propName"></slot>
@@ -1689,7 +1659,7 @@ setTimeout(() => {
 
 ```vue
 <template v-slot="allProp">
-	// allProp可以使用所有插槽的所有属性，通过打点区分。
+  // allProp可以使用所有插槽的所有属性，通过打点区分。
 </template>
 ```
 
@@ -1703,13 +1673,13 @@ setTimeout(() => {
 ### 访问根实例
 
 ```js
-this.$root		
+this.$root;
 ```
 
 ### 访问父组件
 
 ```js
-this.$parent		
+this.$parent;
 ```
 
 ### 访问子组件
@@ -1732,10 +1702,10 @@ provide() {
 子组件使用实例新选项`inject`
 
 ```js
-inject: ['getMap']
+inject: ["getMap"];
 ```
 
-## vue生命周期
+## vue 生命周期
 
 1. `new Vue()`
 
@@ -1779,18 +1749,18 @@ inject: ['getMap']
 
 9. `destoryed()`
 
-   Vue实例销毁，解绑事件监听、子实例、`watcher`。
+   Vue 实例销毁，解绑事件监听、子实例、`watcher`。
 
-## vue自定义指令
+## vue 自定义指令
 
 ### 全局注册
 
 ```js
-Vue.directive('focus', {
-  inserted: function(el) {
-	el.focus()
-  }
-}) 
+Vue.directive("focus", {
+  inserted: function (el) {
+    el.focus();
+  },
+});
 ```
 
 ### 局部注册
@@ -1833,14 +1803,14 @@ directives: {
 
    ```js
    filters: {
-   	function a(){}
+     function a() {}
    }
    ```
 
 2. 全局
 
    ```js
-   Vue.filter(funcName, function (value) {})
+   Vue.filter(funcName, function (value) {});
    ```
 
 ### 使用
@@ -1854,24 +1824,24 @@ directives: {
    ```javascript
    const myMixin = {
      created() {
-   	this.show()    
+       this.show();
      },
-     methods:{
+     methods: {
        show() {
-         console.log('混入！')
-       }
+         console.log("混入！");
+       },
      },
-   }
+   };
    ```
 
 2. 使用混入对象
 
    ```javascript
    const vm = new Vue({
-     mixins: [myMixin]
-   })
+     mixins: [myMixin],
+   });
    // 全局引入：
-   Vue.mixin(myMixin)
+   Vue.mixin(myMixin);
    ```
 
 注意事项：
@@ -1883,7 +1853,7 @@ directives: {
 
 ### 开发插件
 
-插件暴露`install(Vue, options)`方法，在此方法里do something。
+插件暴露`install(Vue, options)`方法，在此方法里 do something。
 
 ```javascript
 const obj = {
@@ -1907,14 +1877,14 @@ const obj = {
 ### 使用插件
 
 ```javascript
-Vue.use(obj)
+Vue.use(obj);
 ```
 
 ## 过渡
 
 ### 单元素/组件过渡
 
-Vue提供了封装组件`transition`
+Vue 提供了封装组件`transition`
 
 ```vue
 <transition name=""></transition>
@@ -1954,7 +1924,7 @@ Vue提供了封装组件`transition`
 
 `transition`新`props`：`mode`
 
-mode常用值：
+mode 常用值：
 
 1. `out-in`：当前元素过渡完，新元素再来。
 2. `in-out`：新元素先过渡，当前元素再走。
@@ -1985,7 +1955,7 @@ mode常用值：
 
 所有属性都是动态可绑定的。
 
-## 模板template编译原理
+## 模板 template 编译原理
 
 流程
 
@@ -1996,12 +1966,12 @@ mode常用值：
    - 不存在，手动`mount`，下一步。
    - 存在，下一步。
 
-   寻找模板`template`，render函数编译。
+   寻找模板`template`，render 函数编译。
 
-   - 不存在，使用外部HTML。
+   - 不存在，使用外部 HTML。
    - 存在，使用。
 
-2. **解析器**：生成AST语法树
+2. **解析器**：生成 AST 语法树
 
    一段一段生成，开始标签、文本、注释、结束标签。确定层级关系使用栈，开始标签推入栈，结束标签弹出栈。
 
@@ -2014,40 +1984,29 @@ mode常用值：
    - 所有静态子树。
    - 静态根树。
 
-4. **代码生成器**：生成render函数
+4. **代码生成器**：生成 render 函数
 
    首先，得到渲染函数字符串。
 
    ```javascript
    with (this) {
-     return _c(
-       'div',
-       { attrs: {"id": "app"} },
-       [
-         _c(
-           'div',
-           { staticClass: "class-name", attrs: { "title": `title`} },
-           [
-             _v(" "+_s(name)+" ")
-           ]
-         ),
-         _v(" "),
-         _c(
-           'div',
-           [_v("tetttt")]
-         )
-       ]
-     )
+     return _c("div", { attrs: { id: "app" } }, [
+       _c("div", { staticClass: "class-name", attrs: { title: `title` } }, [
+         _v(" " + _s(name) + " "),
+       ]),
+       _v(" "),
+       _c("div", [_v("tetttt")]),
+     ]);
    }
    ```
 
-   再通过new Function得到渲染函数，以便得到该模板的虚拟DOM。
+   再通过 new Function 得到渲染函数，以便得到该模板的虚拟 DOM。
 
    注意：
 
-   - `_c`：createElement，处理元素节点为虚拟DOM节点。
-   - `_v`：createTextVNode，处理文本节点为虚拟DOM节点。
-   - `_e`：createEmptyVnode，处理注释节点为虚拟DOM节点。
+   - `_c`：createElement，处理元素节点为虚拟 DOM 节点。
+   - `_v`：createTextVNode，处理文本节点为虚拟 DOM 节点。
+   - `_e`：createEmptyVnode，处理注释节点为虚拟 DOM 节点。
 
 # 杂
 
@@ -2059,7 +2018,7 @@ mode常用值：
 
 本地仓库：`commit`之后的。
 
-### Git版本回退
+### Git 版本回退
 
 1. 查看提交记录
 
@@ -2081,13 +2040,13 @@ mode常用值：
 
    - `git reset --mixed`
 
-     工作区保持不变，本地仓和暂存区回滚到指定版本。
+     工作区保持不变，本地仓和暂存区 回滚到指定版本。
 
    - `git reset --hard`
 
      本地仓、暂存区、工作区都回滚到指定版本。
 
-## Lodash常用
+## Lodash 常用
 
 1. `shuffle`
 2. 拷贝
@@ -2097,7 +2056,7 @@ mode常用值：
 
 ## 跨域
 
-### options预检请求
+### options 预检请求
 
 区分简单请求和复杂请求：
 
@@ -2109,68 +2068,66 @@ mode常用值：
 
 请求报文：
 
-1. `Access-Control-Request-Method`：告知服务器实际请求所使用的HTTP方法；
+1. `Access-Control-Request-Method`：告知服务器实际请求所使用的 HTTP 方法；
 2. `Access-Control-Request-Headers`：告知服务器实际请求所携带的自定义首部字段。
 
 响应报文：
 
-1. `Access-Control-Request-Method`：告知客户端被允许使用的HTTP方法；
+1. `Access-Control-Request-Method`：告知客户端被允许使用的 HTTP 方法；
 2. `Access-Control-Request-Headers`：告知客户端被允许携带的自定义首部字段。
 3. `Access-Control-Max-Age`：浏览器指定时间内无需再次发送预检请求。
 
-## MV*模式
+## MV\*模式
 
 ### MVC
 
-#### Smalltalk-80 MVC解释
+#### Smalltalk-80 MVC 解释
 
-+ View：管理用户界面的层次。
-+ Model：提供操作数据的接口，执行业务逻辑。
-+ Controller：View和Model之间的协作。
+- View：管理用户界面的层次。
+- Model：提供操作数据的接口，执行业务逻辑。
+- Controller：View 和 Model 之间的协作。
 
-用户对View操作后，View将处理的权限移交给Controller。Controller进行应用逻辑（调Model哪个接口、对View数据预处理...），具体的业务逻辑交给Model。当**Model变更时通过观察者模式告诉View**，View收到消息后向Model请求最新的数据，更新界面。
+用户对 View 操作后，View 将处理的权限移交给 Controller。Controller 进行应用逻辑（调 Model 哪个接口、对 View 数据预处理...），具体的业务逻辑交给 Model。当**Model 变更时通过观察者模式告诉 View**，View 收到消息后向 Model 请求最新的数据，更新界面。
 
 #### 优缺点
 
-+ 优点：逻辑分离（应用逻辑、业务逻辑、展示逻辑）、多视图更新（观察者模式）。
-+ 缺点：单元测试困难，View无法组件化（高度依赖Model）。
+- 优点：逻辑分离（应用逻辑、业务逻辑、展示逻辑）、多视图更新（观察者模式）。
+- 缺点：单元测试困难，View 无法组件化（高度依赖 Model）。
 
 #### 前端思考：
 
-1. 前端由于HTTP是单工协议，服务端无法向前端发送消息（websocket除外），只能前端发送请求到后端。
-2. MVC模式有点类似于Vuex。在Vuex中，更改state状态的唯一方法就是提交mutation，即业务逻辑。进行应用逻辑的类似于action，action中提交的是mutation。展示逻辑就类似于Getters，负责将数据归纳整理，提供给页面想要的数据。
+1. 前端由于 HTTP 是单工协议，服务端无法向前端发送消息（websocket 除外），只能前端发送请求到后端。
+2. MVC 模式有点类似于 Vuex。在 Vuex 中，更改 state 状态的唯一方法就是提交 mutation，即业务逻辑。进行应用逻辑的类似于 action，action 中提交的是 mutation。展示逻辑就类似于 Getters，负责将数据归纳整理，提供给页面想要的数据。
 
 ### MVP
 
 #### 解释
 
-大致与MVC相同，唯一不同的是Controller变成了Presenter。
+大致与 MVC 相同，唯一不同的是 Controller 变成了 Presenter。
 
-用户对View操作后，View将处理的权限移交给Presenter。Presenter进行应用逻辑（调Model哪个接口、对View数据预处理...），具体的业务逻辑交给Model。
+用户对 View 操作后，View 将处理的权限移交给 Presenter。Presenter 进行应用逻辑（调 Model 哪个接口、对 View 数据预处理...），具体的业务逻辑交给 Model。
 
-不同的是，当Model变更时通过观察者模式告诉Presenter，**Presenter通过View提供的接口告诉View**。
+不同的是，当 Model 变更时通过观察者模式告诉 Presenter，**Presenter 通过 View 提供的接口告诉 View**。
 
 #### 优缺点
 
-+ 优点：便于对Presenter单元测试、View可组件化。
-+ 缺点：Presenter变得臃肿，不仅有应用逻辑，还有同步逻辑。
+- 优点：便于对 Presenter 单元测试、View 可组件化。
+- 缺点：Presenter 变得臃肿，不仅有应用逻辑，还有同步逻辑。
 
 ### MVVM
 
 #### 解释
 
-大致与MVP相同，唯一不同的是将Presenter中的同步逻辑分给了“Binder”。Binder主要是负责View和Model双向绑定。
+大致与 MVP 相同，唯一不同的是将 Presenter 中的同步逻辑分给了“Binder”。Binder 主要是负责 View 和 Model 双向绑定。
 
-用户对View操作后，View将处理的权限移交给View-Model。View-Model进行应用逻辑（调Model哪个接口、对View数据预处理...），具体的业务逻辑交给Model。
+用户对 View 操作后，View 将处理的权限移交给 View-Model。View-Model 进行应用逻辑（调 Model 哪个接口、对 View 数据预处理...），具体的业务逻辑交给 Model。
 
-不同的是，当Model变更时，**通过Binder自动把数据更新到View上**。当用户**对View操作时，也会自动更新到Model**。
+不同的是，当 Model 变更时，**通过 Binder 自动把数据更新到 View 上**。当用户**对 View 操作时，也会自动更新到 Model**。
 
 #### 优缺点
 
-+ 优点：解决了大量同步问题，提高代码可维护性。便于测试，由于Binder的存在，Model正确即View正确，减少View同步更新测试。
-+ 缺点：建立大量View-Model、数据绑定以指令写在View中不便测试。
-
-
+- 优点：解决了大量同步问题，提高代码可维护性。便于测试，由于 Binder 的存在，Model 正确即 View 正确，减少 View 同步更新测试。
+- 缺点：建立大量 View-Model、数据绑定以指令写在 View 中不便测试。
 
 ## 动态规划
 
@@ -2178,20 +2135,19 @@ mode常用值：
 
 1. 确定状态
 
-   + `f[i][j]`。
-   + 最后一步：最优策略的最后一步。
-   + 子问题：通过最后一步，把问题规模缩小。
+   - `f[i][j]`。
+   - 最后一步：最优策略的最后一步。
+   - 子问题：通过最后一步，把问题规模缩小。
 
-2. 转移方程 
+2. 转移方程
 
 3. 初始条件和边界状态
 
-   边界状态即数组不可越界。初始状态一般类似于f(0) = 0。
+   边界状态即数组不可越界。初始状态一般类似于 f(0) = 0。
 
 4. 计算顺序
 
    一维从小到大，二维从左到右、从上至下。​
-
 
 ## 前端跨域
 
@@ -2201,22 +2157,21 @@ mode常用值：
 
 ### 实战解决方案
 
-1. 服务端设置cors白名单
+1. 服务端设置 cors 白名单
 
-2. Nginx代理
+2. Nginx 代理
 
    前端想要访问的内容，本质是存在跨域问题的。但在客户端和服务端之间增加了一层，这一层与服务端同源，同时又允许客户端访问。客户端访问的就是中间这一层，而中间这一层再请求真实的服务端，返回数据。
 
 ### 前端代理
 
-`api`接口，存在多个地址的问题，它们可能来自多个ip。而跑前端项目时，请求的baseIP固定，而真实的接口IP又不一致，所以请求不到接口。
+`api`接口，存在多个地址的问题，它们可能来自多个 ip。而跑前端项目时，请求的 baseIP 固定，而真实的接口 IP 又不一致，所以请求不到接口。
 
 解决方案
 
-1. 前端本地做代理，请求接口时，更改baseIP。
-2. Nginx代理。
+1. 前端本地做代理，请求接口时，更改 baseIP。
+2. Nginx 代理。
 
 ## 太杂
 
 `console.table()`
-
